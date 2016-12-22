@@ -1,20 +1,12 @@
-<!--<h1>Insta-App</h1>-->
-<div class="posts-wrapper row">
-    <div class="post">
-      <div class="post-head">
-        <div class="name">
-          Shu Xian
-        </div>
-        <div class="image center-block" style="padding-top: 20px;">
-           <%= image_tag @post.image.url(:medium) %>
-        </div>
-        <p class="caption">
-          <%= @post.caption %>
-        </p>
-<div class="text-center edit-links">
-  <%= link_to "Cancel", posts_path %> |
-  <%= link_to "Edit Post", edit_post_path(@post) %>
-</div>
-      </div>
-    </div>
-</div>
+<%= render 'post', post: @post %>
+<% if @post.user.id == current_user.id %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", posts_path %>
+    |
+    <%= link_to "Edit Post", edit_post_path(@post) %>
+  </div>
+<% else %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", posts_path %>
+  </div>
+<% end %>

@@ -1,18 +1,5 @@
-<!--<h1>Insta-App</h1>-->
 <div class="posts-wrapper row">
   <% @posts.each do |post| %>
-    <div class="post">
-      <div class="post-head">
-        <div class="name">
-          Shu Xian
-        </div>
-        <div class="image center-block" style="padding-top: 20px;">
-           <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
-        </div>
-        <p class="caption">
-          <%= post.caption %>
-        </p>
-      </div>
-    </div>
+    <%= render 'post', post: post %>
   <% end %>
 </div>
