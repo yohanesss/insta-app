@@ -1,9 +1,8 @@
 @import "bootstrap-sprockets";
-@import "bootstrap";
+ @import "bootstrap";
 
-@font-face {
-    font-family: "AlexBrush-Regular";
-    src: url(/assets/AlexBrush-Regular.ttf) format("truetype");
+html {  
+  height: 100%;
 }
 
 body {  
@@ -12,7 +11,15 @@ body {
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+.alert {
+  margin-bottom: 0px;
+}
+
 /* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   a {
@@ -22,14 +29,13 @@ body {
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
   .navbar-nav li a {
     color: #125688;
   }
 }
 
 .navbar-container {
-  width: 70%;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -84,7 +90,6 @@ body {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -103,7 +108,6 @@ body {
     }
   }
   margin-bottom: 7px;
-  padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
@@ -131,28 +135,24 @@ body {
   justify-content: center;
 }
 
-/* ## Wrapper and styling for the new and edit views ## */
-
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
-}
+/* ## Wrapper and styling for the new, edit & devise views ## */
 
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
 }
 
-// sign up page css
-html {  
+.registration-bg {
+  padding-top: 4em;
   height: 100%;
+  background-image: image-url('jap.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.registration-bg {
+.login-bg {
   padding-top: 4em;
   height: 100%;
   background-image: image-url('jap.jpg');
@@ -179,26 +179,16 @@ html {
   }
 }
 
-.navbar {
-  margin-bottom: 0px;
-}
-
-.alert {
-  margin-bottom: 0px;
-}
-
-.form-register{
-  padding: 5px;
-}
-
 #image-preview {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 #post_image {
   padding: 1em;
   margin: 0px auto;
 }
+
+
 #paginator {
   color: #4090DB;
   height: 120px;
@@ -233,8 +223,10 @@ html {
     }
   }
 }
-#user_avatar {
-  margin: 20px auto;
+
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
 }
 
 .profile-header {
@@ -263,4 +255,28 @@ html {
 
 .profile-bio {
   margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }

@@ -8,6 +8,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'  
 gem 'kaminari', '~> 0.16.3' 
 gem 'jquery-turbolinks'
+gem 'acts_as_votable'
 # gem 'sass-rails', '>= 3.2'
 # gem 'actionpack', ">= 5.0.0.1"
 gem 'simple_form'
